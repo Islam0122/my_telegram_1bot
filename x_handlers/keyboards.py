@@ -12,13 +12,15 @@ photo_button = KeyboardButton("/photo")
 video_button = KeyboardButton("/video")
 emoji_button = KeyboardButton("/emoji")
 dice_button = KeyboardButton("/dice")
+reg_button = KeyboardButton("/reg")
 start_markup.add(
     start_button,
     quiz_button,
     photo_button,
     video_button,
     emoji_button,
-    dice_button
+    dice_button,
+    reg_button
 )
 
 
@@ -27,6 +29,7 @@ cancel_markup = ReplyKeyboardMarkup(
     one_time_keyboard=True,
 )
 cancel_button = KeyboardButton("Отмена")
+
 cancel_markup.add(cancel_button)
 
 submit_markup = ReplyKeyboardMarkup(

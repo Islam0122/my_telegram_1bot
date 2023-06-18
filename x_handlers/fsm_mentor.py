@@ -16,7 +16,7 @@ class UserState(StatesGroup):
 
 async def mentor_register(message: types.Message):
 
-    if message.from_user.id not in teacher_admin and tutor_admin:
+    if message.from_user.id not in teacher_admin and tutor_admin :
 
         await message.answer("Ты не мой босс!")
 
@@ -87,8 +87,10 @@ async def submit(message: types.Message, state: FSMContext):
         await message.answer("Записал в БД!")
     elif message.text.lower() == 'заново':
         await message.answer("пиши команду -> /reg")
+        await state.finish()
     else:
         await message.answer("Используй кнопки!")
+
 
 
 async def cancel_reg(message: types.Message, state: FSMContext):
@@ -101,9 +103,9 @@ async def cancel_reg(message: types.Message, state: FSMContext):
                              "/start!")
 
 
-
 def register_handlers_commands( dp : Dispatcher):
     dp.register_message_handler(cancel_reg, commands=['cancel'], state='*')
+
 
 
 
