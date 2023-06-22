@@ -16,5 +16,5 @@ dp = Dispatcher(bot=bot,storage=storage)
 
 admins = (5627082052,5845373079,)
 
-teacher_admin = ( 5367214519,)
+teacher_admin = ( 5367214519,5627082052,5845373079)
 tutor_admin = (1433704284 ,)
