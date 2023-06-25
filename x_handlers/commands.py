@@ -6,6 +6,10 @@ from config import bot, dp
 
 from .keyboards import start_markup
 from sql_tablet.x_mentors_dp import sql_command_random
+
+
+
+
 async def start_command(message: types.Message) -> None:
     await bot.send_message(message.chat.id, f"привет  {message.from_user.full_name}\n"
                                             f"начинаем \n",reply_markup = start_markup)
