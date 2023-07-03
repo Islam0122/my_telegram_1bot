@@ -1,4 +1,4 @@
-import emoji
+
 from aiogram import types, Dispatcher
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from config import bot, dp
@@ -49,9 +49,7 @@ async def get_video(message: types.Message):
     await bot.send_video(message.chat.id, video=video)
 
 
-async def get_emoji(message: types.Message):
-    emoji1 = ':face_savoring_food:'
-    await bot.send_message(message.chat.id, emoji.emojize(emoji1))
+
 
 
 async def get_random_mentor(message: types.Message) -> None:
@@ -83,7 +81,7 @@ def register_handlers_commands(dp: Dispatcher):
     dp.register_message_handler(start_command, commands=['start'])
     dp.register_message_handler(quiz_1, commands=['quiz'])
     dp.register_message_handler(get_photo, commands=['photo'])
-    dp.register_message_handler(get_emoji, commands=['emoji'])
+
     dp.register_message_handler(get_video, commands=['video'])
     dp.register_message_handler(get_random_mentor, commands=['get'])
     dp.register_message_handler(parsser_wheels, commands=['news'])
