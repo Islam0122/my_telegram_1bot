@@ -10,7 +10,7 @@ quiz_button = KeyboardButton("/quiz")
 
 photo_button = KeyboardButton("/photo")
 video_button = KeyboardButton("/video")
-emoji_button = KeyboardButton("/emoji")
+
 dice_button = KeyboardButton("/dice")
 reg_button = KeyboardButton("/reg")
 kino_button = KeyboardButton("/kino")
