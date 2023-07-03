@@ -3,12 +3,13 @@ import logging
 from config import dp , bot  , admins
 from x_handlers import commands, callback, extra, admin,dice,fsm_mentor,x_mentor_admin,x_message
 from sql_tablet.x_mentors_dp import sql_create
+from x_new_ import  x_comabds_cinema
 
 
 
 commands.register_handlers_commands(dp)
 callback.register_handlers_callback(dp)
-
+x_comabds_cinema.register_handlers_2commands(dp)
 dice.register_handlers_1commands(dp)
 x_mentor_admin.register_handlers_admin(dp)
 admin.register_handlers_admin(dp)

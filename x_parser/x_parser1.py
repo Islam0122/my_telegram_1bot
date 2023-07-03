@@ -29,7 +29,7 @@ def get_data(html):
 
     for item in items:
         wheels.append({
-            "url": f"https://shina.kg/category/legkovye{item.find('a').get('href')}",
+            "url": f"https://shina.kg{item.find('a').get('href')}",
             "title" : item.find("div", class_="pl-item-info-expandable").find("a").getText(),
             "price": item.find("div", class_="price-wrapper").find("span").getText()
 
